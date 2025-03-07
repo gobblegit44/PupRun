@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 400">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f8f8f8" opacity="0.5"/>
+  
+  <!-- GRID LINES FOR REFERENCE (Commented out in final) -->
+  <!-- <g id="grid" opacity="0.1">
+    <g id="vertical">
+      <line x1="0" y1="0" x2="0" y2="400" stroke="#000" stroke-width="1"/>
+      <line x1="100" y1="0" x2="100" y2="400" stroke="#000" stroke-width="1"/>
+      <line x1="200" y1="0" x2="200" y2="400" stroke="#000" stroke-width="1"/>
+      <line x1="300" y1="0" x2="300" y2="400" stroke="#000" stroke-width="1"/>
+      <line x1="400" y1="0" x2="400" y2="400" stroke="#000" stroke-width="1"/>
+      <line x1="500" y1="0" x2="500" y2="400" stroke="#000" stroke-width="1"/>
+      <line x1="600" y1="0" x2="600" y2="400" stroke="#000" stroke-width="1"/>
+    </g>
+    <g id="horizontal">
+      <line x1="0" y1="0" x2="600" y2="0" stroke="#000" stroke-width="1"/>
+      <line x1="0" y1="100" x2="600" y2="100" stroke="#000" stroke-width="1"/>
+      <line x1="0" y1="200" x2="600" y2="200" stroke="#000" stroke-width="1"/>
+      <line x1="0" y1="300" x2="600" y2="300" stroke="#000" stroke-width="1"/>
+      <line x1="0" y1="400" x2="600" y2="400" stroke="#000" stroke-width="1"/>
+    </g>
+  </g> -->
+  
+  <!-- Food Bowls - Top Row -->
+  <g transform="translate(50, 50)">
+    <!-- Empty Bowl -->
+    <rect x="0" y="10" width="40" height="10" fill="#E74C3C"/>
+    <rect x="0" y="20" width="40" height="20" fill="#C0392B"/>
+    <rect x="5" y="15" width="30" height="20" fill="#ECF0F1"/>
+  </g>
+  
+  <g transform="translate(150, 50)">
+    <!-- Water Bowl -->
+    <rect x="0" y="10" width="40" height="10" fill="#3498DB"/>
+    <rect x="0" y="20" width="40" height="20" fill="#2980B9"/>
+    <rect x="5" y="15" width="30" height="20" fill="#5DADE2"/>
+    <!-- Water ripples -->
+    <rect x="15" y="20" width="10" height="5" fill="#85C1E9"/>
+    <rect x="10" y="30" width="10" height="5" fill="#85C1E9"/>
+  </g>
+  
+  <g transform="translate(250, 50)">
+    <!-- Food Bowl (with kibble) -->
+    <rect x="0" y="10" width="40" height="10" fill="#27AE60"/>
+    <rect x="0" y="20" width="40" height="20" fill="#229954"/>
+    <rect x="5" y="15" width="30" height="20" fill="#F39C12"/>
+    <!-- Kibble pieces -->
+    <rect x="10" y="20" width="5" height="5" fill="#D35400"/>
+    <rect x="20" y="25" width="5" height="5" fill="#D35400"/>
+    <rect x="25" y="20" width="5" height="5" fill="#D35400"/>
+    <rect x="15" y="30" width="5" height="5" fill="#D35400"/>
+  </g>
+  
+  <!-- Toys - Top Right -->
+  <g transform="translate(350, 50)">
+    <!-- Ball -->
+    <rect x="5" y="5" width="30" height="30" fill="#F1C40F"/>
+    <rect x="0" y="10" width="5" height="20" fill="#F1C40F"/>
+    <rect x="35" y="10" width="5" height="20" fill="#F1C40F"/>
+    <rect x="10" y="0" width="20" height="5" fill="#F1C40F"/>
+    <rect x="10" y="35" width="20" height="5" fill="#F1C40F"/>
+    <!-- Ball Pattern -->
+    <rect x="15" y="15" width="10" height="10" fill="#E67E22"/>
+  </g>
+  
+  <g transform="translate(450, 50)">
+    <!-- Bone -->
+    <rect x="5" y="15" width="30" height="10" fill="#ECF0F1"/>
+    <rect x="0" y="5" width="10" height="10" fill="#ECF0F1"/>
+    <rect x="0" y="25" width="10" height="10" fill="#ECF0F1"/>
+    <rect x="30" y="5" width="10" height="10" fill="#ECF0F1"/>
+    <rect x="30" y="25" width="10" height="10" fill="#ECF0F1"/>
+  </g>
+  
+  <!-- People - Second Row -->
+  <g transform="translate(50, 150)">
+    <!-- Male Human -->
+    <!-- Head -->
+    <rect x="15" y="0" width="10" height="10" fill="#F5CBA7"/>
+    <!-- Body -->
+    <rect x="15" y="10" width="10" height="15" fill="#3498DB"/>
+    <!-- Legs -->
+    <rect x="15" y="25" width="5" height="15" fill="#2C3E50"/>
+    <rect x="20" y="25" width="5" height="15" fill="#2C3E50"/>
+    <!-- Arms -->
+    <rect x="10" y="10" width="5" height="10" fill="#3498DB"/>
+    <rect x="25" y="10" width="5" height="10" fill="#3498DB"/>
+    <!-- Hair -->
+    <rect x="15" y="0" width="10" height="3" fill="#5D4037"/>
+  </g>
+  
+  <g transform="translate(150, 150)">
+    <!-- Female Human -->
+    <!-- Head -->
+    <rect x="15" y="0" width="10" height="10" fill="#F5CBA7"/>
+    <!-- Body/Dress -->
+    <rect x="15" y="10" width="10" height="15" fill="#E74C3C"/>
+    <!-- Legs -->
+    <rect x="15" y="25" width="5" height="15" fill="#F5CBA7"/>
+    <rect x="20" y="25" width="5" height="15" fill="#F5CBA7"/>
+    <!-- Arms -->
+    <rect x="10" y="10" width="5" height="10" fill="#E74C3C"/>
+    <rect x="25" y="10" width="5" height="10" fill="#E74C3C"/>
+    <!-- Hair -->
+    <rect x="10" y="0" width="20" height="5" fill="#8E44AD"/>
+    <rect x="10" y="5" width="5" height="5" fill="#8E44AD"/>
+    <rect x="25" y="5" width="5" height="5" fill="#8E44AD"/>
+  </g>
+  
+  <!-- Cat - Second Row Right -->
+  <g transform="translate(250, 150)">
+    <!-- Cat Body -->
+    <rect x="10" y="20" width="20" height="15" fill="#7F8C8D"/>
+    <!-- Head -->
+    <rect x="15" y="10" width="10" height="10" fill="#7F8C8D"/>
+    <!-- Ears -->
+    <rect x="15" y="5" width="5" height="5" fill="#7F8C8D"/>
+    <rect x="20" y="5" width="5" height="5" fill="#7F8C8D"/>
+    <!-- Legs -->
+    <rect x="10" y="35" width="5" height="5" fill="#7F8C8D"/>
+    <rect x="25" y="35" width="5" height="5" fill="#7F8C8D"/>
+    <!-- Tail -->
+    <rect x="30" y="15" width="5" height="5" fill="#7F8C8D"/>
+    <rect x="35" y="10" width="5" height="5" fill="#7F8C8D"/>
+    <!-- Eyes -->
+    <rect x="17" y="13" width="2" height="2" fill="#27AE60"/>
+    <rect x="21" y="13" width="2" height="2" fill="#27AE60"/>
+    <!-- Nose -->
+    <rect x="19" y="16" width="2" height="2" fill="#E74C3C"/>
+  </g>
+  
+  <!-- Furniture - Third Row -->
+  <g transform="translate(50, 250)">
+    <!-- Dog Bed -->
+    <rect x="0" y="20" width="40" height="10" fill="#9B59B6"/>
+    <rect x="0" y="10" width="10" height="10" fill="#9B59B6"/>
+    <rect x="30" y="10" width="10" height="10" fill="#9B59B6"/>
+    <rect x="0" y="0" width="40" height="10" fill="#9B59B6"/>
+    <!-- Pillow -->
+    <rect x="5" y="5" width="30" height="20" fill="#D7BDE2"/>
+  </g>
+  
+  <g transform="translate(150, 250)">
+    <!-- Sofa -->
+    <rect x="0" y="15" width="50" height="15" fill="#3498DB"/>
+    <rect x="0" y="0" width="10" height="15" fill="#3498DB"/>
+    <rect x="40" y="0" width="10" height="15" fill="#3498DB"/>
+    <rect x="0" y="30" width="50" height="5" fill="#2980B9"/>
+    <!-- Cushions -->
+    <rect x="5" y="15" width="40" height="10" fill="#2980B9"/>
+    <rect x="10" y="5" width="10" height="10" fill="#2980B9"/>
+    <rect x="30" y="5" width="10" height="10" fill="#2980B9"/>
+  </g>
+  
+  <g transform="translate(250, 250)">
+    <!-- Chair -->
+    <rect x="10" y="0" width="20" height="5" fill="#E67E22"/>
+    <rect x="10" y="5" width="20" height="15" fill="#D35400"/>
+    <rect x="10" y="20" width="20" height="20" fill="#E67E22"/>
+    <rect x="10" y="40" width="5" height="5" fill="#A04000"/>
+    <rect x="25" y="40" width="5" height="5" fill="#A04000"/>
+  </g>
+  
+  <g transform="translate(350, 250)">
+    <!-- Food Bag -->
+    <rect x="5" y="0" width="30" height="40" fill="#F39C12"/>
+    <rect x="10" y="5" width="20" height="25" fill="#8E44AD"/>
+    <rect x="15" y="10" width="10" height="10" fill="#3498DB"/>
+    <rect x="12" y="30" width="16" height="5" fill="#2C3E50"/>
+  </g>
+  
+  <!-- More items - Fourth Row -->
+  <g transform="translate(50, 350)">
+    <!-- Leash -->
+    <rect x="0" y="5" width="10" height="5" fill="#E74C3C"/>
+    <rect x="10" y="5" width="30" height="2" fill="#E74C3C"/>
+  </g>
+  
+  <g transform="translate(150, 350)">
+    <!-- Tennis Ball -->
+    <rect x="5" y="0" width="20" height="20" fill="#ADFF2F"/>
+    <rect x="0" y="5" width="5" height="10" fill="#ADFF2F"/>
+    <rect x="25" y="5" width="5" height="10" fill="#ADFF2F"/>
+    <rect x="10" y="10" width="10" height="2" fill="#FFFFFF"/>
+  </g>
+  
+  <g transform="translate(250, 350)">
+    <!-- Dog House -->
+    <rect x="0" y="20" width="40" height="20" fill="#D35400"/>
+    <rect x="5" y="25" width="15" height="15" fill="#000000" opacity="0.3"/>
+    <rect x="0" y="0" width="40" height="20" fill="#C0392B"/>
+    <rect x="0" y="0" width="5" height="20" fill="#A04000"/>
+    <rect x="35" y="0" width="5" height="20" fill="#A04000"/>
+  </g>
+  
+  <g transform="translate(350, 350)">
+    <!-- Water/Food Dish Stand -->
+    <rect x="0" y="10" width="40" height="5" fill="#7F8C8D"/>
+    <rect x="5" y="15" width="5" height="10" fill="#7F8C8D"/>
+    <rect x="30" y="15" width="5" height="10" fill="#7F8C8D"/>
+    <rect x="5" y="0" width="10" height="10" fill="#3498DB"/>
+    <rect x="25" y="0" width="10" height="10" fill="#E74C3C"/>
+  </g>
+  
+  <g transform="translate(450, 350)">
+    <!-- Treat Jar -->
+    <rect x="10" y="0" width="20" height="5" fill="#7F8C8D"/>
+    <rect x="10" y="5" width="20" height="20" fill="#ECF0F1" opacity="0.5"/>
+    <rect x="15" y="10" width="5" height="5" fill="#E67E22"/>
+    <rect x="20" y="15" width="5" height="5" fill="#E67E22"/>
+  </g>
+  
+  <g transform="translate(450, 150)">
+    <!-- Hydrant -->
+    <rect x="15" y="5" width="10" height="20" fill="#E74C3C"/>
+    <rect x="10" y="10" width="20" height="10" fill="#E74C3C"/>
+    <rect x="15" y="0" width="10" height="5" fill="#7F8C8D"/>
+    <rect x="10" y="15" width="5" height="5" fill="#7F8C8D"/>
+    <rect x="25" y="15" width="5" height="5" fill="#7F8C8D"/>
+    <rect x="15" y="25" width="10" height="5" fill="#7F8C8D"/>
+  </g>
+  
+  <g transform="translate(350, 150)">
+    <!-- Window -->
+    <rect x="0" y="0" width="40" height="40" fill="#34495E"/>
+    <rect x="5" y="5" width="30" height="30" fill="#85C1E9"/>
+    <rect x="20" y="5" width="5" height="30" fill="#2980B9"/>
+    <rect x="5" y="20" width="30" height="5" fill="#2980B9"/>
+  </g>
+  
+  <!-- Labels for each item -->
+  <g font-family="Arial" font-size="9" fill="#333" text-anchor="middle">
+    <text x="70" y="90">Food Bowl</text>
+    <text x="170" y="90">Water Bowl</text>
+    <text x="270" y="90">Food w/Kibble</text>
+    <text x="370" y="90">Ball</text>
+    <text x="470" y="90">Bone</text>
+    
+    <text x="70" y="195">Male</text>
+    <text x="170" y="195">Female</text>
+    <text x="270" y="195">Cat</text>
+    <text x="370" y="195">Window</text>
+    <text x="470" y="195">Hydrant</text>
+    
+    <text x="70" y="295">Dog Bed</text>
+    <text x="175" y="295">Sofa</text>
+    <text x="270" y="295">Chair</text>
+    <text x="370" y="295">Food Bag</text>
+    
+    <text x="70" y="380">Leash</text>
+    <text x="170" y="380">Tennis Ball</text>
+    <text x="270" y="380">Dog House</text>
+    <text x="370" y="380">Bowl Stand</text>
+    <text x="470" y="380">Treat Jar</text>
+  </g>
+</svg>
