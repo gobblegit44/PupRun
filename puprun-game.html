@@ -147,11 +147,8 @@
             document.getElementById('restart-button').addEventListener('click', restartGame);
             document.addEventListener('keydown', handleKeyDown);
             
-            // Create game assets
-            createDogSprite();
-            createAccessorySprites();
-            createObstacleSprite();
-            createGroundSprite();
+            // Load game assets
+            loadAssets();
             
             // Initial render
             render();
@@ -171,174 +168,23 @@
         let accessorySprites = {};
         let obstacleSprite = new Image();
         let groundSprite = new Image();
-        
-        function createDogSprite() {
-            // Create an 8-bit style golden retriever using canvas
-            let tempCanvas = document.createElement('canvas');
-            tempCanvas.width = 96; // 3 frames (run1, run2, jump)
-            tempCanvas.height = 24;
-            let tempCtx = tempCanvas.getContext('2d');
-            
-            // Colors
-            const goldenColor = '#FFD700';
-            const darkGolden = '#DAA520';
-            const outlineColor = '#000000';
-            
-            // Draw frame 1 (running pose 1)
-            drawDogFrame(tempCtx, 0, 0, goldenColor, darkGolden, outlineColor, 'run1');
-            
-            // Draw frame 2 (running pose 2)
-            drawDogFrame(tempCtx, 32, 0, goldenColor, darkGolden, outlineColor, 'run2');
-            
-            // Draw frame 3 (jumping)
-            drawDogFrame(tempCtx, 64, 0, goldenColor, darkGolden, outlineColor, 'jump');
-            
-            // Convert to image
-            dogSprite.src = tempCanvas.toDataURL();
-        }
-        
-        function drawDogFrame(ctx, x, y, mainColor, darkColor, outlineColor, pose) {
-            ctx.fillStyle = outlineColor;
-            
-            // Basic dog shape outline
-            ctx.fillRect(x + 4, y + 4, 24, 16);
-            
-            // Fill with golden color
-            ctx.fillStyle = mainColor;
-            ctx.fillRect(x + 5, y + 5, 22, 14);
-            
-            // Draw darker details
-            ctx.fillStyle = darkColor;
-            
-            // Ear
-            ctx.fillRect(x + 5, y + 5, 6, 4);
-            
-            // Eye
-            ctx.fillStyle = outlineColor;
-            ctx.fillRect(x + 8, y + 8, 2, 2);
-            
-            // Nose
-            ctx.fillRect(x + 4, y + 12, 2, 2);
-            
-            // Tail
-            ctx.fillStyle = mainColor;
-            
-            if (pose === 'run1') {
-                // Front legs down, back legs up
-                ctx.fillRect(x + 8, y + 20, 4, 4); // Front leg
-                ctx.fillRect(x + 20, y + 18, 4, 2); // Back leg up
-                ctx.fillRect(x + 28, y + 8, 4, 6); // Tail up
-            } else if (pose === 'run2') {
-                // Front legs up, back legs down
-                ctx.fillRect(x + 8, y + 18, 4, 2); // Front leg up
-                ctx.fillRect(x + 20, y + 20, 4, 4); // Back leg down
-                ctx.fillRect(x + 28, y + 10, 4, 6); // Tail middle
-            } else if (pose === 'jump') {
-                // All legs tucked up
-                ctx.fillRect(x + 8, y + 16, 4, 2); // Front legs tucked
-                ctx.fillRect(x + 20, y + 16, 4, 2); // Back legs tucked
-                ctx.fillRect(x + 28, y + 6, 4, 6); // Tail up high
-            }
-        }
-        
-        function createAccessorySprites() {
-            // Create sprites for accessories
+
+        function loadAssets() {
+            // Load dog sprite
+            dogSprite.src = 'assets/golden-retriever-8bit.svg';
+
+            // Load accessory sprites
             ACCESSORY_TYPES.forEach(type => {
-                let tempCanvas = document.createElement('canvas');
-                tempCanvas.width = 16;
-                tempCanvas.height = 16;
-                let tempCtx = tempCanvas.getContext('2d');
-                
-                // Colors
-                let mainColor;
-                let outlineColor = '#000000';
-                
-                switch(type) {
-                    case 'collar':
-                        mainColor = '#FF0000'; // Red collar
-                        break;
-                    case 'ball':
-                        mainColor = '#00FF00'; // Green ball
-                        break;
-                    case 'bone':
-                        mainColor = '#FFFFFF'; // White bone
-                        break;
-                    case 'food':
-                        mainColor = '#A52A2A'; // Brown food
-                        break;
-                }
-                
-                // Draw accessory outline
-                tempCtx.fillStyle = outlineColor;
-                
-                if (type === 'collar') {
-                    tempCtx.fillRect(2, 6, 12, 4);
-                } else if (type === 'ball') {
-                    tempCtx.beginPath();
-                    tempCtx.arc(8, 8, 6, 0, Math.PI * 2);
-                    tempCtx.fill();
-                } else if (type === 'bone') {
-                    tempCtx.fillRect(3, 4, 10, 8);
-                    tempCtx.fillRect(2, 2, 4, 12);
-                    tempCtx.fillRect(10, 2, 4, 12);
-                } else if (type === 'food') {
-                    tempCtx.fillRect(2, 4, 12, 8);
-                }
-                
-                // Fill with main color
-                tempCtx.fillStyle = mainColor;
-                
-                if (type === 'collar') {
-                    tempCtx.fillRect(3, 7, 10, 2);
-                } else if (type === 'ball') {
-                    tempCtx.beginPath();
-                    tempCtx.arc(8, 8, 5, 0, Math.PI * 2);
-                    tempCtx.fill();
-                } else if (type === 'bone') {
-                    tempCtx.fillRect(4, 5, 8, 6);
-                    tempCtx.fillRect(3, 3, 2, 10);
-                    tempCtx.fillRect(11, 3, 2, 10);
-                } else if (type === 'food') {
-                    tempCtx.fillRect(3, 5, 10, 6);
-                }
-                
-                // Create image
                 let img = new Image();
-                img.src = tempCanvas.toDataURL();
+                img.src = `assets/pixel-accessories.svg#${type}`;
                 accessorySprites[type] = img;
             });
-        }
-        
-        function createObstacleSprite() {
-            // Create a simple rock obstacle
-            let tempCanvas = document.createElement('canvas');
-            tempCanvas.width = 32;
-            tempCanvas.height = 32;
-            let tempCtx = tempCanvas.getContext('2d');
-            
-            // Draw rock
-            tempCtx.fillStyle = '#555555';
-            tempCtx.beginPath();
-            tempCtx.moveTo(4, 28);
-            tempCtx.lineTo(8, 20);
-            tempCtx.lineTo(16, 12);
-            tempCtx.lineTo(24, 16);
-            tempCtx.lineTo(28, 28);
-            tempCtx.closePath();
-            tempCtx.fill();
-            
-            // Add highlights
-            tempCtx.fillStyle = '#777777';
-            tempCtx.beginPath();
-            tempCtx.moveTo(16, 12);
-            tempCtx.lineTo(20, 16);
-            tempCtx.lineTo(24, 20);
-            tempCtx.lineTo(24, 16);
-            tempCtx.closePath();
-            tempCtx.fill();
-            
-            // Create image
-            obstacleSprite.src = tempCanvas.toDataURL();
+
+            // Load obstacle sprite
+            obstacleSprite.src = 'assets/pixel-accessories.svg#rock';
+
+            // Create ground sprite
+            createGroundSprite();
         }
         
         function createGroundSprite() {
