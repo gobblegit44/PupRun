@@ -1,2 +1,2 @@
 # PupRun
-SVG asset based side scrolling game in HTML5
+Pixelated pup and related SVG assets based side scrolling HTML5 game
